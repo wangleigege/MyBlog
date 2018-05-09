@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>欢迎学习交流</title>
+	<link rel="stylesheet" type="text/css" href="cs/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="cs/transforms.css">
+	<link rel="stylesheet" type="text/css" href="cs/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="cs/mssage0.css">
+	<style type="text/css">
+	               /* 保证导航栏不遮住内容 */
+
+
+		body{
+			padding: 70px;
+			background-color: deepskyblue;
+		}
+        
+
+        .navbar-nav li{
+        	padding-left: 30px;
+
+        }
+         
+         .dropdown-menu li{
+
+         	text-align: center;
+         }
+		 .carousel {
+            height: 500px;
+            margin-bottom: 60px;
+        }
+
+        .carousel .item {
+            height: 500px;
+            background-color: #000;
+        }
+
+        .carousel .item img {
+            width: 100%;
+        }
+
+        .carousel-caption {
+            z-index: 10;
+        }
+
+        .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        .summary {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .summary .col-md-4 {
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 5px 15px 5px  	#EE00EE;
+        }
+
+        .summary img{
+        	height: 500px;
+        	width: 100%;
+        }
+
+        /* 特性 */
+
+        .feature-divider {
+            margin: 40px 0;
+            color: blue;
+        }
+
+     .Row{
+     	position: relative;
+     	top: 20px;
+     	margin-bottom: 20px;
+     }
+	</style>
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><!-- //缩小时的导航栏 -->
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span><!-- 三条杠的数量 --> 
+
+				</button>
+				<a href="navbar-brand" href="#"><h5>Welcome to  Myblog </h5></a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ><!-- //缩小时的导航栏 -->
+				<ul class="nav navbar-nav">
+					<li ><a href="聊天机器人/chat.html">我的小机器人</a></li>
+					<li><a href="面试技巧/register.html">学习资源-你值的拥有 </a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">我崇拜的对象<span class="caret"></span></a>
+					   <ul class="dropdown-menu" role="menu">
+					   	<li> <a href="https://baijiahao.baidu.com/s?id=1579146432156145138&wfr=spider&for=pc">林俊杰自信</a></li>
+					   	<li> <a href="http://www.sohu.com/a/198977142_99982010">杨幂的努力</a></li>
+					   	<li> <a href="https://baijiahao.baidu.com/s?id=1548805184514664&wfr=spider&for=pc">胡歌的重生</a></li>
+					   	
+					   </ul>
+
+					</li>
+					<li><a href="小游戏/main.html">有爱小游戏 </a></li>
+					<li><a href="message.html">留言一颗 </a></li>
+					<li ><a href="" data-toggle="modal" data-target="#about">博主资料 </a></li><!-- 弹出框 -->
+					<li class="li_last"><button type="button" id="clock" style="margin-left: -33px"></button></li>
+					<li ><audio controls autoplay="autoplay" src="music/周二珂 - 告白气球.mp3" preload=""></audio></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="carousel-example" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+		<li data-target="#carousel-example" data-slide-to="0" class="active"></li><!-- 旋转图片下面小按钮 -->
+		<li data-target="#carousel-example" data-slide-to="1" ></li>
+		<li data-target="#carousel-example" data-slide-to="2" ></li>
+		<li data-target="#carousel-example" data-slide-to="3" ></li>
+
+		</ol>
+
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="image/轮播5.jpg" alt="1 slide">
+				<div class="carousel-caption">
+				 <h1>出发</h1>
+
+                    <p>
+                     不知道是哪里走错，路的尽头没有人等我
+                                                ——胡歌 《月光》
+                       </p>
+                  </div>
+			</div>
+
+			<div class="item ">
+				<img src="image/轮播4.jpg" alt="2 slide">
+				<div class="carousel-caption">总是来不及慢慢跟你分享， 来不及好好坐下来听你说话， 来匆匆去也匆匆， 熟悉的面孔，开心的笑脸，总是一瞬间的飘过，不能停留太久。。---林俊杰</div>
+			</div>
+
+			<div class="item ">
+				<img src="image/励志1 (1).jpg" alt="3 slide">
+				<div class="carousel-caption">人生的磨难是很多的，所以我们不可对于每一件轻微的伤害都过于敏感。在生活磨难面前，精神上的坚强和无动于衷是我们抵抗罪恶和人生意外的最好武器。 —— 洛克</div>
+			</div>
+			<div class="item ">
+				<img src="image/励志1 (2).jpg" alt=" 4 slide">
+
+				<div class="carousel-caption">
+				<h1>Go  GO  Go</h1>
+				<p>在年轻人的颈项上，没有什么东西能比事业心这颗灿烂的宝珠更迷人的了。 —— 哈菲兹</p>
+			    </div>
+			    </div>
+
+		</div>
+		<a class="left carousel-control" href="#carousel-example"  data-slide="prev"><!-- 左右移动 -->
+			<span class="glyphicon glyphicon-chevron-left">☚</span>			
+		</a>
+
+		<a class="right carousel-control" href="#carousel-example" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right">☛</span>			
+		</a><!-- 旋转 -->
+	</div>
+
+	<div class=" summary container">
+		<div class="row">
+			 <div class="col-md-4">
+			 	<img src="image/开心.jpg">
+			 	<div class="leftflow leftflow0">
+			 		<h2>生活就是面对真实的微笑，就是越过障碍注视将来。——【法国】雨果</h2>
+			 	</div>
+			 </div>
+			  <div class="col-md-4">
+			  	<img src="image/舒适版.jpeg">
+			  	<div class="leftflow leftflow1">
+			 		<h2>
+         。当走过那段幽暗峡谷，现在的我，终于得到救赎，获得重生，成为一个全新的自己。
+          ——林俊杰 </h2>
+			 	</div>
+			  </div>
+			   <div class="col-md-4">
+			   	<img src="image/竖版1.jpg">
+			   	<div class="leftflow leftflow2">
+			 		<h2>
+                  如果全世界都靠不住，就自己靠自己。就算全世界都不爱我，我也可以自己爱我。
+                  ——杨幂 
+                    </h2>
+			 	</div>
+			   </div>
+			
+		</div>
+		<hr class="feature-divider">
+
+
+		<ul class="nav nav-tabs" role="tablist" id="tab-list">
+			<li class="active"><a href="#home" role="tab" data-toggle="tab">bootstrap</a></li>
+			<li ><a href="#profile" role="tab" data-toggle="tab">React</a></li>
+			<li ><a href="#messages" role="tab" data-toggle="tab">Vue</a></li>
+			<li ><a href="#settings" role="tab" data-toggle="tab">AngularJs</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div class="tab-pane active" id="home">
+				<div class="col-md-7">
+										<p>实现Bootstrap导航鼠标悬停下拉菜单及下拉主菜单可点击效果<br>
+										Bootstrap是一个非常不错的前端框架，但是在实际的使用过程中还需要根据实际的需要再微调整，比如我们默认使用Bootstrap框架下拉菜单的时候主导航是无法点击打开页面的，以及下拉展开需要单击主菜单，如果我们需要实现主菜单可以点击打开，而且下拉菜单实现悬停下拉的效果则需要进行调整JS脚本。<br><br>
+
+					        第一、实现悬停下拉菜单效果<br><br>
+
+					          1、修改bootstrap.js文件<br>
+
+					     2、添加脚本<br>
+
+					    $(document).ready(function(){
+					    dropdownOpen();
+					    });
+					    function dropdownOpen() {
+
+					    var $dropdownLi = $('li.dropdown');
+
+					    $dropdownLi.mouseover(function() {
+					    $(this).addClass('open');
+					    }).mouseout(function() {
+					    $(this).removeClass('open');
+					    });
+					    }
+                       <br>
+					添加脚本替换后可以实现鼠标悬停菜单下拉效果。</p>
+				</div>
+				
+				<div class="col-md-5">
+					<img src="image/竖版1.jpg">
+				</div>
+			</div>
+			<div class="tab-pane" id="profile">
+				<div class="col-md-7">
+					<h2>React</h2>
+					<br>
+					<p>1.声明式设计 −React采用声明范式，可以轻松描述应用。<br>
+
+		    2.高效 −React通过对DOM的模拟，最大限度地减少与DOM的交互。<br>
+
+		    3.灵活 −React可以与已知的库或框架很好地配合。<br>
+
+		    4.JSX − JSX 是 JavaScript 语法的扩展。React 开发不一定使用 JSX ，但我们建议使用它。<br>
+
+		    5.组件 − 通过 React 构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中。<br>
+
+		    6.单向响应的数据流 − React 实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。<br>
+
+                 </p>
+				</div>
+				
+				<div class="col-md-5">
+					<img src="image/网红.png">
+				</div>
+
+			</div>
+			<div class="tab-pane" id="messages">
+				<div class="col-md-5">
+					<img src="image/校园 .jpg">
+				</div>
+
+				<div class="col-md-7">
+					<p> 
+
+					<h2>Vue</h2>
+
+
+					已经会了 HTML、CSS、JavaScript？即刻阅读指南开始构建应用！
+					灵活<br><br>
+
+					不断繁荣的生态系统，可以在一个库和一套完整框架之间自如伸缩。
+					高效<br><br>
+
+					20kB min+gzip 运行大小
+					超快虚拟 DOM
+					最省心的优化<br><br> 
+
+
+				</div>	
+			</div>
+			<div class="tab-pane" id="settings">
+				<div class="col-md-7">
+					<p>
+   						
+	   							<h2>ng-model 指令</h2>
+
+	  						ng-model 指令可以将输入域的值与 AngularJS 创建的变量绑定。
+							AngularJS 实例<br><br>
+							《div ng-app="myApp" ng-controller="myCtrl"><br>
+	    					名字: 《input ng-model="name"》<br><br><br>
+							</div》<br>
+
+							
+							var app = angular.module('myApp', []);<br>
+							app.controller('myCtrl', function($scope) {<br>
+	   						 $scope.name = "John Doe";<br>
+	   						});<br>
+   						
+			
+			
+                    </p>
+				</div>
+				
+				<div class="col-md-5">
+					<img src="image/竖版3.jpg">
+				</div>
+			</div>
+		</div>
+	</div>
+
+  
+    <div class="modal fade" id="about">
+    	<div class="modal-dialog">
+    		<div class="modal-content">
+    			<div class="modal-header">
+    				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    				<h5 class="modal-title">出发</h5>			
+    			</div>
+    			<div class="modal-body">
+    				    qq：842469533
+    					微信：wl6wl9
+    					努力前进
+    			</div>
+    			<div class="modal-footer">
+    				
+    				<button type="button" class="btn btn-default" data-dismiss="modal">
+    					Close
+    				</button>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="transforms">
+    	<div class="transforms-course col-md-3">
+    		<img src="image/7_150529104258_12.jpg" style="width:100%">
+    		<div class="row">
+    			<h3>好好学习 dayday upup</h3>
+    		<h1><strong>walk  in the way never stop！</strong></h1>
+    			
+    		</div>
+    	</div>
+
+    	<div class="transforms-course col-md-3">
+    		<img src="image/轮播.jpeg" style="width:100%">
+    		<div class="row">
+    			<h3>一定要努力向上</h3>
+    		<h1><strong>believe streng</strong></h1>
+    		</div>
+    	</div>
+
+    	<div class="transforms-course col-md-3">
+    		<img src="image/林俊杰竖版.jpeg" style="width:100%">
+    		<div class="row">
+    			<h3>never  give up</h3>
+    		<h1><strong>Believe youself</strong></h1>
+    		</div>
+    	</div>
+
+    	<div class="transforms-course col-md-3">
+    		<img src="image/竖版.jpg" style="width:100%">
+    	    <div class="row">
+    	    <h3>Do  not  stop</h3>
+    		<h1><strong>come on  baby</strong></h1>
+    	    </div>
+    	</div>
+	
+    </div>
+
+
+     <div class="transforms-messages">
+    	<div class="transforms-message col-md-3">
+    		<p>
+    			比较typeof与instanceof？<br><br>
+
+				相同点：JavaScript 中 typeof 和 instanceof 常用来判断一个变量是否为空，或者是什么类型的。
+
+				typeof的定义和用法：返回值是一个字符串，用来说明变量的数据类型。<br>
+
+				细节：<br>
+
+				
+
+    		<div class="row">
+    			<h3>好好学习 dayday upup</h3>
+    		<h1><strong>walk  in the way never stop！</strong></h1>
+    			<a href="message2.html">获取更多资料</a>
+    		</div>
+    	</div>
+
+    	<div class="transforms-message col-md-3">
+    		<p>React 特点<br>
+
+		    1.声明式设计 −React采用声明范式，可以轻松描述应用。<br>
+
+		    2.高效 −React通过对DOM的模拟，最大限度地减少与DOM的交互。<br>
+
+		    3.灵活 −React可以与已知的库或框架很好地配合。<br>
+
+
+            </p>
+    		<div class="row">
+
+    			<h3>一定要努力向上</h3>
+    		<h1><strong>believe streng</strong></h1>
+    		  <a href="message2.html">获取更多资料</a>
+    		</div>
+    	</div>
+
+    	<div class="transforms-message col-md-3">
+    		<p>
+
+					$(selector).addClass(class)：为每个匹配的元素添加指定的类名<br>
+
+	             $(selector).removeClass(class)：从所有匹配的元素中删除全部或者指定的类，删除class中某个值；<br><br>
+
+	           
+            </p>
+    		<div class="row">
+    			<h3>never  give up</h3>
+    		<h1><strong>Believe youself</strong></h1>
+    		<a href="message2.html">获取更多资料</a>
+    		</div>
+    	</div>
+
+    	<div class="transforms-message col-md-3">
+    		<p>
+	            $(selector).toggleClass(class)：如果存在（不存在）就删除（添加）一个类<br><br>
+
+	            $(selector).removeAttr(class);删除class这个属性；<br>
+            </p>
+    	    <div class="row">
+    	    <h3>Do  not  stop</h3>
+    		<h1><strong>come on  baby</strong></h1>
+    		<a href="message2.html">获取更多资料</a>
+    	    </div>
+    	</div>
+	
+    </div>
+
+
+  	<div class="col-md-12 Row" >
+  		  <div id="accordion1" >
+		<h2>博主</h2>
+		<div>			
+			<p>
+			小磊磊
+			</p>
+		</div>
+       <h2>电话</h2>
+		<div>
+			
+			<p>
+				13525139870
+			</p>
+		</div>
+       <h2>版权</h2>
+		<div>	
+			<p>
+				吓你的  没有
+			</p>
+		</div>
+		
+	</div>
+  	</div>
+
+ 
+ 
+ 
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		 $("#accordion1").accordion();
+		$('.carousel').carousel({
+          interval: 2000
+       })
+
+
+	});
+
+
+	 var attime = setInterval(clock, 100);  
+      function clock(){  
+        var time=new Date();  
+        a=time.getHours()
+        b=time.getMinutes()
+        c=time.getSeconds()
+        if(a<10) {
+            a="0"+a;
+        }         
+
+        if(b<10) {
+            b="0"+b;
+        }   
+
+        if(c<10) {
+           c="0"+c;
+        }         
+        attime=a+":"+b+":"+c; 
+        document.getElementById("clock").innerHTML = attime;  
+      }   
+</script>
+</body>
+</html>

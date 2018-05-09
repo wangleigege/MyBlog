@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>面试技巧</title>
+     <style type="text/css">
+           body,html{
+
+            margin: 0;
+            padding: 0;
+            background: url('../image/beijing2.jpg') no-repeat ;
+            background-size:cover;
+               background-color:deeppink;
+           }
+
+           .ZiYuan{
+
+                width: 200px;
+                height: 50px;
+                margin-top: 30px;
+                margin-left: 20px;
+                text-align: center;
+                box-shadow: -12px 7px 5px deepskyblue;
+                border: 1px solid blue;
+
+           }
+          
+            .Password_btn{
+                    
+                width: 200px;
+                height: 50px;
+                background: url('../image/button.jpg') no-repeat;
+                line-height: 50px;
+                color: #4f1f9c;
+                font-size: 20px;
+              
+            }                        
+          
+          .Password{
+               margin: 200px auto;
+               width: 500px;
+               height: 200px;
+               background-color: deepskyblue;
+               display: none;
+               text-align: center;
+          }
+
+          
+          .form_password{
+               
+               padding-top: 20px;
+
+          }
+          .form_password p{
+
+            text-align: center;
+
+          }
+
+
+
+          .right{
+                margin: 100px auto;
+               width: 50px;
+               height: 50px;
+               border-radius: 50px;
+               box-shadow:-31px 34px 5px #888888;
+               background: url('../image/beijing1.jpg') no-repeat;
+               text-align: center; 
+               opacity: 0;
+          }
+
+          .right ul{
+
+            padding-top: 50%;
+          }
+          .right ul li{
+
+            list-style:none;
+
+          }
+
+
+     </style>
+
+</head>
+<body>
+  <div class="ZiYuan">
+
+    <button class="Password_btn">资源在这聊</button>
+
+  </div>
+    
+   <div class="Password">
+        <form class="form_password">
+            <p>请输入保险密码奥</p>
+             <input type="password" name="pass" class="pass" >
+              <input type="button" class="pass_button" value="确定">
+              <input type="button" class="pass_button_no" value="取消">
+         </form>
+        
+   </div>
+
+   <div class="right">
+      <ul>
+        <li><a href="https://pan.baidu.com/s/1gf4c2zD">想要更好的面试吗</a></li>
+        <li></li>
+        <li></li>
+      </ul>
+                        <!-- //https://pan.baidu.com/s/1gf4c2zD -->
+   </div>
+     
+   
+</body>
+</html>
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+     
+     $(function(){
+
+          $('.Password_btn').on('click',function(){
+
+               $('.Password').css("display","block");
+          })
+
+          $(".pass_button_no").on('click',function(){
+
+               $('.Password').css("display","none");
+
+          })
+
+          $('.pass_button').on('click',function(){
+               var value=$('.pass').val();
+
+               $.ajax({
+
+                    url:'register.php',
+                    type:'post',
+                    data:{password:value},
+                    success:function(data){
+
+                      if(data=="输入正确，"){
+
+                         $('.Password').css("display","none");
+                         $('.right').animate({
+                                  opacity:'1',
+                                  height:'350px',
+                                  width:'350px'
+                                });
+
+                      }else{
+
+                         alert("输入错误，请再次输入");
+                      }
+                    }
+               })
+          })
+      })
+</script>

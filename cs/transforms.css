@@ -1,0 +1,111 @@
+/*
+* @Author: lenovo
+* @Date:   2018-03-22 20:08:56
+* @Last Modified by:   lenovo
+* @Last Modified time: 2018-04-03 16:52:29
+*/
+
+
+.transforms-course{
+
+	position: relative;
+	overflow: hidden;
+}
+
+.transforms-course img{
+
+	height: 450px;
+}
+
+.transforms-course .row{
+
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   position: absolute;
+   top:0px;
+   opacity: 0;
+   left: 0;
+}
+
+ .transforms-course .row:hover{
+	background: deeppink;
+	opacity: 0.5;
+	transition: 0.5s ;
+	transform: rotateY(30deg);
+}
+
+.leftflow{
+
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   position: absolute;
+   top:0px;
+   opacity: 0;
+   left: 0;
+   color:black;
+   padding-top: 150px;
+   margin-bottom: 20px;
+}
+
+.leftflow0:hover{
+  background: #B94FFF ;
+  opacity: 0.8;
+  transition: 0.5s ;
+  transform: scale(0.9, 0.8);
+}
+
+.leftflow1:hover{
+   background: #5599FF ;
+  opacity: 0.8;
+  transition: 0.8s ;
+  transform: scale(0.8, 0.8);
+
+}
+
+.leftflow2:hover{
+
+    background: #E93EFF  ;
+  opacity: 0.8;
+  transition: 1s ;
+  transform: scale(0.8, 0.7);
+}
+
+
+/* ----------------------------------- */
+
+
+ .transforms-message{
+
+  position: relative;
+  overflow: hidden;
+}
+
+.transforms-message p{
+
+  height: 350px;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+.transforms-message .row{
+
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   position: absolute;
+   top:0px;
+   opacity: 0;
+   left: 0;
+}
+
+ .transforms-message .row:hover{
+  background: deeppink;
+  opacity: 0.8;
+  transition: 0.8s ;
+  transform: translateX(50px);
+}
+
+.transforms-message a{
+  color: #FFFF77;
+}
